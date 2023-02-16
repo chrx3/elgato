@@ -21,5 +21,8 @@
       "browser",
       "android"
     ]
+  },
+  "dependencies": {
+    "buffer": "^6.0.3"
   }
 }

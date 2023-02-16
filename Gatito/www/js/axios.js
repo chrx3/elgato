@@ -1,40 +1,15 @@
-let url = 'http://10.0.1.45:8000/usuario'
+let url = 'http://34.176.203.109:8000/usuario'
 
-
-const obtenerUsuarios = async() =>{    
-    try{
-        const respuesta = await axios.get(url)
-
-        console.log(respuesta.data);
-
-    }catch(error){
-        console.log(error);
-    }
-    
-}
-
-// axios.get(url)
-// .then((res)=>{
-//     var datos = res.data
-//     var objetivo = document.getElementById('username');
-//     for( i = 0; i < datos.length; i++){
-//         objetivo.innerHTML = JSON.stringify(datos[i]['Username']); 
-
-//     }
-    
-// }).catch((error)=>{
-//     console.log(error)
-// })
-
+localStorage.setItem('login','false');
 const usernameinput = document.getElementById("Username");
 const passwordinput = document.getElementById("Password");
 const boton = document.getElementById("boton");
+const estado = localStorage.getItem('login');
 
 //login
 boton.addEventListener("click",(e)=>{
     const username = usernameinput.value;
     const password = passwordinput.value;
-
     axios.get(url,{
 
 
@@ -46,6 +21,8 @@ boton.addEventListener("click",(e)=>{
         }else{
             if(username == res.data[0]['Username'] && password == res.data[0]['Password']){
                 alert('ingresado')  
+                localStorage.setItem('login','true');
+                window.location.href = 'gatito.html';
             }else{
                 e.preventDefault();
                 alert('usuario o contraseña incorrecto')
@@ -58,8 +35,3 @@ boton.addEventListener("click",(e)=>{
     })
     
 })
-
-
-
-
-

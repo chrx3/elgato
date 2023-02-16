@@ -5,15 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <title>Gatito Feliz</title>
 </head>
-<body>
-    Gatito Feliz
-    <h1>Usuarios</h1>
-    <div class="formulario">
-        <input type="text" name="Username" id="Username">
-        <input type="password" name="Password" id="Password">
-        <button type="submit" id="boton">Ingresar</button>
+<body class="p-5">
+    
+    <div class="container-fluid pt-5">
+        <div class="card">
+            <h1 class="text-center">Gatito Feliz</h1>
+            <div class="form-group card-body">
+                <label class="uname">Username:</label>
+                <input class="form-control" type="text" name="Username" id="Username">
+            </div>
+            <div class="form-group card-body">    
+                <label class="uname">Password</label>
+                <input class="form-control" type="password" name="Password" id="Password">
+            </div>
+            <div class="form-group card-body"> 
+                <button class="btn btn-primary col-12" type="submit" id="boton">Ingresar</button>
+            </div>
+        </div>    
     </div>
     <div class="lista">
 
@@ -21,5 +32,8 @@
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="js/axios.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    
 </body>
 </html>
