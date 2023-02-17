@@ -14,8 +14,8 @@ from Gato.views import UsuarioViewSet, GatoViewSet
 router: ExtendedSimpleRouter = ExtendedSimpleRouter()
 
 router = routers.DefaultRouter()
-router.register(r'Usuario', UsuarioViewSet)
-router.register(r'Gato', GatoViewSet)
+router.register('Usuario', UsuarioViewSet)
+router.register('Gato', GatoViewSet)
 
 
 
@@ -24,7 +24,7 @@ urlpatterns=[
     # path('usuario/<id>', views.usuarioAPI),
     # # path('gatito',views.gatitoAPI),
     # path('gatito/<id>', views.gatitoAPI),
-    path('gatito/savefile', views.SaveFile),
+    path('savefile', views.SaveFile),
 
     path('schema/', SpectacularAPIView.as_view(), name='schema'),
     path('schema/swagger/', SpectacularSwaggerView.as_view(url_name='Gato:schema'), name='swagger'),

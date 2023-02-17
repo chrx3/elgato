@@ -21,6 +21,6 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('Gato/', include(('Gato.urls', 'Gato'), namespace='Gato')),
+    path('', include(('Gato.urls', 'Gato'), namespace='Gato')),
     # path('', include('Gato.urls'))
 ]
