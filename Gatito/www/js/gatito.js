@@ -1,4 +1,4 @@
-url = 'http://34.176.203.109:8000/Photos/download_MqFUNMy.jpg'
+url = 'http://34.176.38.39:8000/Photos/DALLE_2023-02-20_09.28.58_-_A_cata_sitting_on_a_chair.png'
 
 const estado = localStorage.getItem('login')
 if(estado == 'false'){
